@@ -7,7 +7,17 @@ public class Item : MonoBehaviour
     public Examine examine;
     public PlayerMovement player;
 
- 
+    public void Start()
+    {
+
+        if(examine == null)
+        {
+            examine = GameObject.Find("Player").GetComponentInChildren<Examine>();
+            player = GameObject.Find("Player").GetComponent<PlayerMovement>();
+   
+        }
+    }
+
 
     public IEnumerator ItemAdded()
     {
