@@ -7,7 +7,7 @@ public class PlayerCamera : MonoBehaviour
     public float mouseSensitivity = 100f;
 
     public Transform playerBody;
-    public Examine examine;
+    public Polaroid polaroid;
     float xRotation = 0f;
 
     void Start()
@@ -18,7 +18,7 @@ public class PlayerCamera : MonoBehaviour
 
     void Update()
     {
-        if (examine.GetComponent<Examine>().onExamine == false)
+        if (polaroid.GetComponent<Polaroid>().onExamine == false)
         {
             float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
             float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
