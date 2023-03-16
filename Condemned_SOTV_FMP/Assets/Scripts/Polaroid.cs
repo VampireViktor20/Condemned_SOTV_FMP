@@ -130,14 +130,12 @@ public class Polaroid : MonoBehaviour
 
     IEnumerator CapturePolaroid()
     {
-        capturingPolaroid = true;
         PolaroidUI.SetActive(false);
         viewingPolaroid = true;
-
+        PolaroidFrame.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
         yield return new WaitForEndOfFrame();
 
         Rect regionToRead = new Rect(0, 0, Screen.width, Screen.height);
-
         polaroidCapture.ReadPixels(regionToRead, 0, 0, false);
         polaroidCapture.Apply();
         ShowPolaroid();
@@ -148,6 +146,7 @@ public class Polaroid : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         capturingPolaroid = false;
         RemovePolaroid();
+        
         
         
     }

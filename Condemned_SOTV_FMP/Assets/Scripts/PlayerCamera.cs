@@ -8,6 +8,7 @@ public class PlayerCamera : MonoBehaviour
 
     public Transform playerBody;
     public Polaroid polaroid;
+    //public Computer computer;
     float xRotation = 0f;
 
     void Start()
@@ -29,5 +30,10 @@ public class PlayerCamera : MonoBehaviour
             transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
             playerBody.Rotate(Vector3.up * mouseX);
         }
+
+        //if (computer.GetComponent<Computer>().usingComputer == false)
+        //{
+        //    gameObject.GetComponent<PlayerCamera>().enabled = true;
+        //}
     }
 }
