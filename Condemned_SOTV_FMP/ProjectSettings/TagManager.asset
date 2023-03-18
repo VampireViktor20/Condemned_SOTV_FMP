@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Item
   - Computer
+  - Polaroid
   layers:
   - Default
   - TransparentFX

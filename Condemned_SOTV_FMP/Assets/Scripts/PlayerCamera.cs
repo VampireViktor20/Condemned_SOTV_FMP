@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerCamera : MonoBehaviour
 {
-    public float mouseSensitivity = 100f;
+    public float mouseSensitivity;
 
     public Transform playerBody;
     public Polaroid polaroid;

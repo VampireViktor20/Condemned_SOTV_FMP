@@ -32,8 +32,7 @@ public class Computer : MonoBehaviour
                     computerUI.SetActive(true);
                     player.enabled = false;
                     playercam.enabled = false;
-                    
-                    
+
                 }
             }
             else

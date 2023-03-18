@@ -9,8 +9,15 @@ public class Polaroid : MonoBehaviour
     [SerializeField] private Image polaroidDisplayArea;
     [SerializeField] private GameObject PolaroidFrame;
     [SerializeField] private GameObject PolaroidUI;
+    [SerializeField] private Texture2D polaroidCapture;
+    [SerializeField] private GameObject polaroidPrefab;
+    [SerializeField] private Transform  polaroidParent;
+    [SerializeField] private GameObject polaroidInstance;
+    [SerializeField] public List<Transform> spawnPoints;
+    [SerializeField] private int currentSpawnPointIndex;
 
-    [Header("Polaroid FLash")]
+
+    [Header("Polaroid Flash")]
     [SerializeField] private GameObject PolaroidFlash;
     [SerializeField] private float flashDuration;
 
@@ -21,24 +28,22 @@ public class Polaroid : MonoBehaviour
     [Header("Polaroid Sound")]
     [SerializeField] private AudioSource polaroidSound;
 
-    private Texture2D polaroidCapture;
+    public bool examineMode = true;
     public bool viewingPolaroid = false;
     public bool capturingPolaroid = false;
 
-
-    public float distance;
-    public Transform playerSocket;
-    public Item item;
-    public GameObject interactIcon;
-   
-
-    public PlayerMovement player;
-
-    Vector3 originalPos;
-    public bool onExamine = false;
-    GameObject examined;
+    [Header("Examine Item")]
+    [SerializeField] public float distance;
+    [SerializeField] public Transform playerSocket;
+    [SerializeField] public Item item;
+    [SerializeField] public GameObject interactIcon;
+    [SerializeField] public PlayerMovement player;
+    [SerializeField]  Vector3 originalPos;
+    [SerializeField]  public bool onExamine = false;
+    [SerializeField]  GameObject examined;
     private void Start()
     {
+        currentSpawnPointIndex = 0;
         polaroidCapture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
     }
 
@@ -54,13 +59,10 @@ public class Polaroid : MonoBehaviour
                 interactIcon.SetActive(true);
                 if(Input.GetKeyDown(KeyCode.Mouse0))
                 {
-                    viewingPolaroid = true;
                     examined = hit.transform.gameObject;
                     originalPos = hit.transform.position;
                     item = hit.transform.gameObject.GetComponent<Item>();
                     onExamine = true;
-                    PolaroidUI.SetActive(true);
-
                     StartCoroutine(PickupItem());
                 }
             }
@@ -71,12 +73,13 @@ public class Polaroid : MonoBehaviour
             }
         }
 
-       if(onExamine)
+       if(onExamine && !examineMode)
         {
             if(Input.GetMouseButtonDown(0))
             {
                if(!viewingPolaroid && !capturingPolaroid)
                 {
+                    
                     StartCoroutine(CapturePolaroid());
                 }
                else if (viewingPolaroid)
@@ -109,6 +112,21 @@ public class Polaroid : MonoBehaviour
             PolaroidUI.SetActive(false);
         }
 
+        if(Input.GetKeyDown(KeyCode.Tab))
+        {
+            examineMode = !examineMode;
+            if (examineMode)
+            {
+                PolaroidUI.SetActive(false);
+                
+            }
+            else
+            {
+                PolaroidUI.SetActive(true);
+               
+            }
+        }
+            { }
 
 
     }
@@ -123,8 +141,8 @@ public class Polaroid : MonoBehaviour
     IEnumerator DropItem()
     {
         onExamine = false;
-        examined.transform.rotation = Quaternion.identity;
-        yield return new WaitForSeconds(2f);
+        examined.transform.rotation = Quaternion.identity; 
+        yield return new WaitForSeconds(0.2f);
         player.enabled = true;
     }
 
@@ -134,11 +152,27 @@ public class Polaroid : MonoBehaviour
         viewingPolaroid = true;
         PolaroidFrame.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
         yield return new WaitForEndOfFrame();
-
         Rect regionToRead = new Rect(0, 0, Screen.width, Screen.height);
         polaroidCapture.ReadPixels(regionToRead, 0, 0, false);
         polaroidCapture.Apply();
         ShowPolaroid();
+
+
+        GameObject newPolaroid = Instantiate(polaroidPrefab, polaroidParent);
+        Transform polaroidChild = newPolaroid.transform.Find("PolaroidPhoto");
+        polaroidChild.GetComponent<Renderer>().material.mainTexture = polaroidCapture;
+
+        int randomIndex = Random.Range(0, spawnPoints.Count);
+        Transform nextSpawnPoint = spawnPoints[currentSpawnPointIndex];
+        currentSpawnPointIndex = (currentSpawnPointIndex + 1) % spawnPoints.Count;
+        newPolaroid.transform.position = nextSpawnPoint.position;
+        
+        if(polaroidInstance != null)
+        {
+            Destroy(polaroidInstance);
+        }
+
+
         StartCoroutine(DropItem());
         item.gameObject.SetActive(false);
         yield return new WaitForSeconds(2.5f);
@@ -171,8 +205,10 @@ public class Polaroid : MonoBehaviour
 
     void RemovePolaroid()
     {
+        examineMode = true;
         viewingPolaroid = false;
         PolaroidFrame.SetActive(false);
+        polaroidInstance = null;
         //PolaroidUI.SetActive(true);
     }
 
