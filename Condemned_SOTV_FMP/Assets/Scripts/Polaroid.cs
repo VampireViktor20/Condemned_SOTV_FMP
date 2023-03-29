@@ -21,7 +21,7 @@ public class Polaroid : MonoBehaviour
     [SerializeField] private GameObject PolaroidFlash;
     [SerializeField] private float flashDuration;
 
-    [Header("Polaroid Fader Effect")]
+    [Header("Polaroid Flash/Fader Effect")]
     [SerializeField] private Animator fadingAnim;
     [SerializeField] private Animator printingAnim;
 
@@ -41,6 +41,8 @@ public class Polaroid : MonoBehaviour
     [SerializeField]  Vector3 originalPos;
     [SerializeField]  public bool onExamine = false;
     [SerializeField]  GameObject examined;
+    public float zoomSpeed = 2f;
+
     private void Start()
     {
         currentSpawnPointIndex = 0;
@@ -91,13 +93,17 @@ public class Polaroid : MonoBehaviour
 
         if(onExamine)
         {
-            
-                
+            if(Input.mouseScrollDelta.y !=0)
+            {
+                Camera.main.fieldOfView = Mathf.Clamp(Camera.main.fieldOfView - Input.mouseScrollDelta.y * zoomSpeed, 10f, 60f);
+            }
+
             playerSocket.Rotate(new Vector3(Input.GetAxis("Mouse Y"), -Input.GetAxis("Mouse X"), 0) * Time.deltaTime * 350f);
             examined.transform.position = Vector3.Lerp(examined.transform.position, playerSocket.position, 0.2f);
         }
         else if(examined != null)
         {
+            Camera.main.fieldOfView = 60f;
             examined.transform.SetParent(null);
             examined.transform.position = Vector3.Lerp(examined.transform.position, originalPos, 0.2f);
         }
@@ -112,7 +118,7 @@ public class Polaroid : MonoBehaviour
             PolaroidUI.SetActive(false);
         }
 
-        if(Input.GetKeyDown(KeyCode.Tab))
+        if(Input.GetKeyDown(KeyCode.Tab) && onExamine)
         {
             examineMode = !examineMode;
             if (examineMode)
@@ -140,6 +146,7 @@ public class Polaroid : MonoBehaviour
 
     IEnumerator DropItem()
     {
+        PolaroidUI.SetActive(false);
         onExamine = false;
         examined.transform.rotation = Quaternion.identity; 
         yield return new WaitForSeconds(0.2f);
@@ -152,6 +159,7 @@ public class Polaroid : MonoBehaviour
         viewingPolaroid = true;
         PolaroidFrame.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
         yield return new WaitForEndOfFrame();
+        polaroidCapture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
         Rect regionToRead = new Rect(0, 0, Screen.width, Screen.height);
         polaroidCapture.ReadPixels(regionToRead, 0, 0, false);
         polaroidCapture.Apply();

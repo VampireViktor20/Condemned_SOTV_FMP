@@ -17,7 +17,7 @@ public class PlayerCamera : MonoBehaviour
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
         if (polaroid.GetComponent<Polaroid>().onExamine == false)
         {

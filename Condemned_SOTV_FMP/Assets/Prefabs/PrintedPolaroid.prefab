@@ -8,10 +8,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1144329118778310125}
+  - component: {fileID: 5710955503687240320}
   - component: {fileID: 4861841091149020919}
   - component: {fileID: 2088218773234123854}
   - component: {fileID: 704710055174346694}
+  - component: {fileID: 608676118232830876}
   m_Layer: 0
   m_Name: PolaroidPhoto
   m_TagString: Untagged
@@ -19,20 +20,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!4 &1144329118778310125
-Transform:
+--- !u!224 &5710955503687240320
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4528202432045406932}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.52, y: 0.0337, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.8344629, y: 0.76714367, z: 0.8344629}
   m_Children: []
-  m_Father: {fileID: 5872292277423304900}
+  m_Father: {fileID: 7677495406879107227}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.52, y: 0.0337}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!33 &4861841091149020919
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -94,6 +100,14 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!222 &608676118232830876
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4528202432045406932}
+  m_CullTransparentMesh: 0
 --- !u!1 &5872292277423304904
 GameObject:
   m_ObjectHideFlags: 0
@@ -102,11 +116,12 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5872292277423304900}
+  - component: {fileID: 7677495406879107227}
   - component: {fileID: 5872292277423304901}
   - component: {fileID: 5872292277423304906}
   - component: {fileID: 5872292277423304907}
   - component: {fileID: -378661237583969791}
+  - component: {fileID: 7260884444633171185}
   m_Layer: 0
   m_Name: PrintedPolaroid
   m_TagString: Item
@@ -114,8 +129,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5872292277423304900
-Transform:
+--- !u!224 &7677495406879107227
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -125,10 +140,15 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.0005, y: 0.25, z: 0.25}
   m_Children:
-  - {fileID: 1144329118778310125}
+  - {fileID: 5710955503687240320}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!33 &5872292277423304901
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -203,3 +223,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   polaroid: {fileID: 0}
   player: {fileID: 0}
+  ItemName: 
+--- !u!222 &7260884444633171185
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5872292277423304904}
+  m_CullTransparentMesh: 0

@@ -6,6 +6,7 @@ public class Item : MonoBehaviour
 {
     public Polaroid polaroid;
     public PlayerMovement player;
+    public string ItemName;
 
     public void Start()
     {
