@@ -33,14 +33,18 @@ public class Polaroid : MonoBehaviour
     public bool capturingPolaroid = false;
 
     [Header("Examine Item")]
+    [SerializeField] public Text itemNameText;
     [SerializeField] public float distance;
     [SerializeField] public Transform playerSocket;
     [SerializeField] public Item item;
     [SerializeField] public GameObject interactIcon;
     [SerializeField] public PlayerMovement player;
-    [SerializeField]  Vector3 originalPos;
-    [SerializeField]  public bool onExamine = false;
-    [SerializeField]  GameObject examined;
+    [SerializeField] Vector3 originalPos;
+    [SerializeField] public bool onExamine = false;
+    [SerializeField] GameObject examined;
+
+
+
     public float zoomSpeed = 2f;
 
     private void Start()
@@ -64,6 +68,7 @@ public class Polaroid : MonoBehaviour
                     examined = hit.transform.gameObject;
                     originalPos = hit.transform.position;
                     item = hit.transform.gameObject.GetComponent<Item>();
+                    itemNameText.text = item.ItemName;
                     onExamine = true;
                     StartCoroutine(PickupItem());
                 }
@@ -91,6 +96,8 @@ public class Polaroid : MonoBehaviour
             }
         }
 
+   
+
         if(onExamine)
         {
             if(Input.mouseScrollDelta.y !=0)
@@ -112,7 +119,7 @@ public class Polaroid : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse1) && onExamine)
         {
-
+            itemNameText.text = "";
             StartCoroutine(DropItem());
             onExamine = false;
             PolaroidUI.SetActive(false);
@@ -132,7 +139,7 @@ public class Polaroid : MonoBehaviour
                
             }
         }
-            { }
+        
 
 
     }
@@ -142,6 +149,7 @@ public class Polaroid : MonoBehaviour
         player.enabled = false;
         yield return new WaitForSeconds(0.2f);
         examined.transform.SetParent(playerSocket);
+
     }
 
     IEnumerator DropItem()
@@ -155,6 +163,7 @@ public class Polaroid : MonoBehaviour
 
     IEnumerator CapturePolaroid()
     {
+        
         PolaroidUI.SetActive(false);
         viewingPolaroid = true;
         PolaroidFrame.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
@@ -200,6 +209,7 @@ public class Polaroid : MonoBehaviour
         PolaroidFrame.SetActive(true);
         StartCoroutine(PolaroidFlashEffect());
         fadingAnim.Play("PolaroidFade");
+        itemNameText.text = "";
         
     }
 
@@ -213,6 +223,7 @@ public class Polaroid : MonoBehaviour
 
     void RemovePolaroid()
     {
+        
         examineMode = true;
         viewingPolaroid = false;
         PolaroidFrame.SetActive(false);

@@ -8,6 +8,7 @@ public class PlayerCamera : MonoBehaviour
 
     public Transform playerBody;
     public Polaroid polaroid;
+    public int camSmooth;
     //public Computer computer;
     float xRotation = 0f;
 
@@ -21,8 +22,8 @@ public class PlayerCamera : MonoBehaviour
     {
         if (polaroid.GetComponent<Polaroid>().onExamine == false)
         {
-            float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-            float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+            float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime * camSmooth;
+            float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime * camSmooth;
 
             xRotation -= mouseY;
             xRotation = Mathf.Clamp(xRotation, -90f, 90f);
