@@ -20,12 +20,12 @@ public class Item : MonoBehaviour
     }
 
 
-    public IEnumerator ItemAdded()
-    {
-        polaroid.GetComponent<Polaroid>().onExamine = false;
-        player.enabled = true;
-        gameObject.SetActive(false);
-        yield return new WaitForSeconds(0.2f);
-        Destroy(gameObject);
-    }
+    //public IEnumerator ItemAdded()
+    //{
+    //    polaroid.GetComponent<Polaroid>().onExamine = false;
+    //    player.enabled = true;
+    //    gameObject.SetActive(false);
+    //    yield return new WaitForSeconds(0.2f);
+    //    Destroy(gameObject);
+    //}
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PolaroidCapture : MonoBehaviour
+public class FreeCam : MonoBehaviour
 {
     [Header("Polaroid Added")]
     [SerializeField] public Image polaroidDisplayArea;
@@ -16,12 +16,14 @@ public class PolaroidCapture : MonoBehaviour
 
     [Header("Polaroid Fader Effect")]
     [SerializeField] public Animator fadingAnim;
+    [SerializeField] public Animator printingAnim;
 
     [Header("Polaroid Sound")]
     [SerializeField] public AudioSource polaroidSound;
 
     private Texture2D polaroidCapture;
     public bool viewingPolaroid;
+    public bool freeCamMode;
 
     public void Start()
     {
@@ -30,18 +32,30 @@ public class PolaroidCapture : MonoBehaviour
 
     public void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0) && freeCamMode)
         {
             if(!viewingPolaroid)
             {
                 StartCoroutine(CapturePolaroid());
             }
-            else
-            {
-                RemovePolaroid();
-            }
            
         }
+
+
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            freeCamMode = !freeCamMode;
+            if(freeCamMode)
+            {
+                PolaroidUI.SetActive(true);
+            }
+            else
+            {
+                PolaroidUI.SetActive(false);
+            }
+
+        }
+       
     }
 
     public IEnumerator CapturePolaroid()
@@ -50,12 +64,17 @@ public class PolaroidCapture : MonoBehaviour
         viewingPolaroid = true;
 
         yield return new WaitForEndOfFrame();
-
+        PolaroidFrame.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
         Rect regionToRead = new Rect(0, 0, Screen.width, Screen.height);
-
+    
         polaroidCapture.ReadPixels(regionToRead, 0, 0, false);
         polaroidCapture.Apply();
         ShowPolaroid();
+        yield return new WaitForSeconds(2.5f);
+        printingAnim.Play("PolaroidPrint");
+        yield return new WaitForSeconds(0.5f);
+        RemovePolaroid();
+
     }
 
    public void ShowPolaroid()

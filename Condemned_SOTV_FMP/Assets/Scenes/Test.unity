@@ -948,7 +948,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 47942950}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.2643, y: 1.04, z: 4.23}
+  m_LocalPosition: {x: -6.2643, y: 1.04, z: 3.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1174,8 +1174,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000024319, y: -158}
-  m_SizeDelta: {x: 319.29166, y: 104.44919}
+  m_AnchoredPosition: {x: -0.000022888, y: -359}
+  m_SizeDelta: {x: 606.50354, y: 131.20059}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &61684526
 MonoBehaviour:
@@ -1198,11 +1198,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 60
+    m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 6
-    m_MaxSize: 75
+    m_MinSize: 1
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -5008,7 +5008,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   polaroid: {fileID: 0}
   player: {fileID: 251711402}
-  ItemName: 
+  ItemName: Knife
 --- !u!1 &398911962
 GameObject:
   m_ObjectHideFlags: 0
@@ -12818,6 +12818,7 @@ MonoBehaviour:
   - {fileID: 1367974985}
   - {fileID: 0}
   currentSpawnPointIndex: 6
+  polaroidCount: 0
   PolaroidFlash: {fileID: 763265959}
   flashDuration: 0.2
   fadingAnim: {fileID: 1887213762}
@@ -12832,6 +12833,7 @@ MonoBehaviour:
   item: {fileID: 0}
   interactIcon: {fileID: 763235667}
   player: {fileID: 251711402}
+  freecam: {fileID: 1688573999}
   originalPos: {x: 0, y: 0, z: 0}
   onExamine: 0
   examined: {fileID: 0}
@@ -14989,7 +14991,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1172626441}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.2643, y: 1.29, z: 4.23}
+  m_LocalPosition: {x: -6.2643, y: 1.29, z: 3.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -21271,7 +21273,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1688573999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21290,8 +21292,10 @@ MonoBehaviour:
   PolaroidFlash: {fileID: 763265959}
   flashDuration: 0.2
   fadingAnim: {fileID: 1887213762}
+  printingAnim: {fileID: 912533629}
   polaroidSound: {fileID: 1688574001}
   viewingPolaroid: 0
+  freeCamMode: 0
 --- !u!224 &1688574000
 RectTransform:
   m_ObjectHideFlags: 0
