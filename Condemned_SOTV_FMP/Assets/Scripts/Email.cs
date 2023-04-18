@@ -8,6 +8,7 @@ public class Email : MonoBehaviour
     public GameObject emailApp;
     public GameObject email;
     public PlayerMovement player;
+    public PlayerCamera cam;
     public Computer computer;
 
     void Update()
@@ -41,6 +42,7 @@ public class Email : MonoBehaviour
     {
         computer.computerUI.SetActive(false);
         player.enabled = true;
+        cam.enabled = true;
         Cursor.visible = false;
         
     }

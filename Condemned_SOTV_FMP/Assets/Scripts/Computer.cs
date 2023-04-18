@@ -12,6 +12,7 @@ public class Computer : MonoBehaviour
     [SerializeField] public GameObject computerUI;
     [SerializeField] PlayerMovement player;
     [SerializeField] public PlayerCamera playercam;
+    [SerializeField] public FreeCam freecam;
 
     void Update()
     {
@@ -24,22 +25,30 @@ public class Computer : MonoBehaviour
             if (hit.transform.tag == "Computer" && !usingComputer)
             {
                 computerText.SetActive(true);
+
                 if (Input.GetKeyDown(KeyCode.Mouse0))
                 {
+                    
                     Cursor.visible = true;
                     Cursor.lockState = CursorLockMode.Confined;
                     usingComputer = true;
                     computerUI.SetActive(true);
                     player.enabled = false;
                     playercam.enabled = false;
+                    //freecam.enabled = false;
+                    
+
 
                 }
+
             }
             else
             {
-
-               computerText.SetActive(false);
+                usingComputer = false;
+                computerText.SetActive(false);
             }
+            
+            
         }
       
     }
