@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e378197e1359f348880112e4a53104d, type: 3}
+  m_Name: Email4
+  m_EditorClassIdentifier: 
+  emailName: World of Work
+  emailMessage: "That ID badge makes you feel a part of something bigger, doesn\u2019t
+    it? Giving you a purpose in capturing life at its fullest, like an impressionist
+    depicting paintings as it is transformed relived moments of life itself.  It
+    makes your own perspective to every image you take in living your best memories.
+    \r\nOnly that your moments in life aren\u2019t the same as others. Friends and
+    family being the strongest of most people come across to you as the opposite.
+    Are there worse than positive, captured moments in your scrapbook?  The realism
+    of photography is making you realise that it is not all reliant and secure as
+    it should be. Not only choosing this line of work as a career but being able
+    to look back on something has been a struggle from the start. \r\nYou look at
+    a polaroid and see disassociation from the world and feel purely isolated from
+    it all, even though you feel it will all get better by further distraction. One
+    of these methods being at the end of a bottle, that only delays and spirals the
+    inevitable. Wouldn\u2019t you agree? \r\nOnly look no further than where you
+    left your empty glass\u2026\r"

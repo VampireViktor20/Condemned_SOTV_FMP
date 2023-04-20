@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5710955503687240320}
   - component: {fileID: 4861841091149020919}
   - component: {fileID: 2088218773234123854}
-  - component: {fileID: 704710055174346694}
   - component: {fileID: 608676118232830876}
   m_Layer: 0
   m_Name: PolaroidPhoto
@@ -86,20 +85,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &704710055174346694
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4528202432045406932}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!222 &608676118232830876
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -124,7 +109,7 @@ GameObject:
   - component: {fileID: 7260884444633171185}
   m_Layer: 0
   m_Name: PrintedPolaroid
-  m_TagString: Item
+  m_TagString: Polaroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -207,8 +192,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 43.83496, y: 1, z: 1}
+  m_Center: {x: -21.417479, y: 0, z: 0}
 --- !u!114 &-378661237583969791
 MonoBehaviour:
   m_ObjectHideFlags: 0

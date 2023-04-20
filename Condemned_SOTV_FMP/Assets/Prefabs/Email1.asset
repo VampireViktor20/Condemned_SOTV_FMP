@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e378197e1359f348880112e4a53104d, type: 3}
   m_Name: Email1
   m_EditorClassIdentifier: 
-  emailName: Email 1
-  emailMessage: "Dear Player,\n\nJust checking to see if the email has appeared and
-    that you understand how the UI works? \n\nPlease let me know if this will help
-    as a help function for the next update!\n\nKind regards,\n\n..."
+  emailName: The Condemning Dream
+  emailMessage: "So, the same visions you appear when you try and clear your head?
+    \r\n\nI guessed as much. This isn\u2019t something that you can just \u2018sleep
+    off\u2019 and get better. It all seems so real, doesn\u2019t it? Like someone
+    trying to reach out and show the importance of it all. \r\n\nNow is the time
+    to recollect the stages scattered around your life and piece together how you
+    came to this point! I reckon your camera will help you capture the reality of
+    it all.\r\n\nWhy don\u2019t we start at the beginning with something that symbolises
+    friendship\u2026 \r"

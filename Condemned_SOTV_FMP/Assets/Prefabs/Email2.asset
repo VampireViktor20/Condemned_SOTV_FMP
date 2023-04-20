@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e378197e1359f348880112e4a53104d, type: 3}
+  m_Name: Email2
+  m_EditorClassIdentifier: 
+  emailName: Friendship is/was Beautiful
+  emailMessage: "You found it! Remember when Debbie made it for you? That bond you
+    shared was so strong. You could feel like you like you could to her about anything,
+    day or night never mattered as she was there! \n\r\nThat all changed when the
+    exam period took over your socialising as studying became your main priority.
+    Debbie was still around at school but all the focus on revision started to bend
+    your friendship, becoming isolated without having time to relax and have the
+    closest person to you for support. Would things have been different if you made
+    time back then and spoke to her more? \n\r\nOf course, that didn\u2019t mean
+    to say your parents weren\u2019t there for you right? There was always that photo
+    you kept reminding you of family memories\u2026\r"

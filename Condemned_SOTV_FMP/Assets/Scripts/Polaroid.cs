@@ -40,6 +40,7 @@ public class Polaroid : MonoBehaviour
     [SerializeField] public Transform playerSocket;
     [SerializeField] public Item item;
     [SerializeField] public GameObject interactIcon;
+    [SerializeField] public GameObject polaroidIcon;
     [SerializeField] public PlayerMovement player;
     [SerializeField] public FreeCam freecam;
     [SerializeField] Vector3 originalPos;
@@ -61,8 +62,28 @@ public class Polaroid : MonoBehaviour
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
         RaycastHit hit;
 
+
         if(Physics.Raycast(transform.position, fwd, out hit, distance))
         {
+            if(hit.transform.tag == "Polaroid" && !onExamine)
+                
+            {
+                polaroidIcon.SetActive(true);
+                if(Input.GetMouseButtonDown(0))
+                {
+                    examined = hit.transform.gameObject;
+                    originalPos = hit.transform.position;
+                    item = hit.transform.gameObject.GetComponent<Item>();
+                    itemNameText.text = item.ItemName;
+                    onExamine = true;
+                    StartCoroutine(PickupItem());
+                }
+            }
+            else
+            {
+                polaroidIcon.SetActive(false); 
+            }
+
             if(hit.transform.tag == "Item" && !onExamine)
             {
                 interactIcon.SetActive(true);
@@ -128,6 +149,11 @@ public class Polaroid : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Tab) && onExamine)
         {
+            if (examined.tag == "Polaroid")
+            {
+                examineMode = false;
+                PolaroidUI.SetActive(false);
+            }
             examineMode = !examineMode;
             if (examineMode)
             {

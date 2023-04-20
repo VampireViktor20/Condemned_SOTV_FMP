@@ -6,7 +6,7 @@ public class PolaroidCamera : MonoBehaviour
 {
     [SerializeField] private GameObject polaroidPrefab;
     [SerializeField] private Transform spawnPoint;
-    [SerializeField] private float polaroidForce = 5f;
+    //[SerializeField] private float polaroidForce = 5f;
 
     private Camera mainCamera;
 

@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e378197e1359f348880112e4a53104d, type: 3}
+  m_Name: Email3
+  m_EditorClassIdentifier: 
+  emailName: Family is Forever?
+  emailMessage: "Fond memories coming back to you? Your Mum and Dad had been planning
+    this special holiday to celebrate your results and getting a place on your dream
+    Photography course! It was all so perfect, wasn\u2019t it? Remember the last
+    couple of nights seeing your parents so content and happy knowing their little
+    girl was going to make something of herself. \r\n\nThis wasn\u2019t how things
+    stayed when you set off for your university though. First the weekly catch ups
+    settling on campus made you feel like you never left home. Mum more than dad
+    at times to talk about the wonders of independence and studying your dreams.
+    \r\n\nThis started to unfold when you found out that dad was let go from his
+    work and Mum was having to pick up extra hours working at the office with the
+    project manager. Weekly calls turned to every month or so with more bearing news
+    to hear from Dad\u2019s voice, that Mum isn\u2019t welcome home anymore. How
+    did that make you feel knowing that your role models are no longer together?\r\n\nCould
+    you even call it a family anymore? You were so caught up in your studies that
+    there wasn\u2019t time to process your parents\u2019 domestics. Was this a good
+    distraction or do you think you should have been there for the two people who
+    have supported you the most in your life? How could you after enrolling into
+    a work placement. Don\u2019t forget your badge\u2026\r"
