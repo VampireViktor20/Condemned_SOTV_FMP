@@ -8,7 +8,7 @@ public class Computer : MonoBehaviour
 
     [SerializeField] public float distance;
     [SerializeField] public bool usingComputer;
-    [SerializeField] public GameObject computerText;
+    [SerializeField] public GameObject computerIcon;
     [SerializeField] public GameObject computerUI;
     [SerializeField] PlayerMovement player;
     [SerializeField] public PlayerCamera playercam;
@@ -24,7 +24,7 @@ public class Computer : MonoBehaviour
         {
             if (hit.transform.tag == "Computer" && !usingComputer)
             {
-                computerText.SetActive(true);
+                computerIcon.SetActive(true);
 
                 if (Input.GetKeyDown(KeyCode.Mouse0))
                 {
@@ -45,7 +45,7 @@ public class Computer : MonoBehaviour
             else
             {
                 usingComputer = false;
-                computerText.SetActive(false);
+                computerIcon.SetActive(false);
             }
             
             

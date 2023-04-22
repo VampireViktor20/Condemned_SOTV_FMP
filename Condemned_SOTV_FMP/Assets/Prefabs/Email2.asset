@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e378197e1359f348880112e4a53104d, type: 3}
   m_Name: Email2
   m_EditorClassIdentifier: 
-  emailName: Friendship is/was Beautiful
+  emailName: 'Friendship was Beautiful:'
   emailMessage: "You found it! Remember when Debbie made it for you? That bond you
     shared was so strong. You could feel like you like you could to her about anything,
     day or night never mattered as she was there! \n\r\nThat all changed when the

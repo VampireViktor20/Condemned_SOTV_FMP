@@ -44,6 +44,7 @@ public class Polaroid : MonoBehaviour
     [SerializeField] public PlayerMovement player;
     [SerializeField] public FreeCam freecam;
     [SerializeField] Vector3 originalPos;
+    [SerializeField] private Vector3 originalSocketPos;
     [SerializeField] public bool onExamine = false;
     [SerializeField] GameObject examined;
 
@@ -55,6 +56,7 @@ public class Polaroid : MonoBehaviour
     {
         currentSpawnPointIndex = 0;
         polaroidCapture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
+        originalSocketPos = playerSocket.localPosition;
     }
 
     private void Update()
@@ -73,6 +75,11 @@ public class Polaroid : MonoBehaviour
                 {
                     examined = hit.transform.gameObject;
                     originalPos = hit.transform.position;
+
+                    if (hit.transform.tag == "Polaroid")
+                    {
+                        playerSocket.localPosition = new Vector3(0f, 1.5f, 0.9f);
+                    }
                     item = hit.transform.gameObject.GetComponent<Item>();
                     itemNameText.text = item.ItemName;
                     onExamine = true;
@@ -104,6 +111,11 @@ public class Polaroid : MonoBehaviour
             }
         }
 
+        if(!onExamine && playerSocket.localPosition != originalSocketPos)
+        {
+            playerSocket.localPosition = originalSocketPos;
+        }
+
        if(onExamine && !examineMode)
         {
             if(Input.GetMouseButtonDown(0))
@@ -130,6 +142,7 @@ public class Polaroid : MonoBehaviour
 
             playerSocket.Rotate(new Vector3(Input.GetAxis("Mouse Y"), -Input.GetAxis("Mouse X"), 0) * Time.deltaTime * 350f);
             examined.transform.position = Vector3.Lerp(examined.transform.position, playerSocket.position, 0.2f);
+         
         }
         else if(examined != null)
         {

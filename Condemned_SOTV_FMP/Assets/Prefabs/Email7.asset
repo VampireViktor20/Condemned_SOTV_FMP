@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e378197e1359f348880112e4a53104d, type: 3}
+  m_Name: Email7
+  m_EditorClassIdentifier: 
+  emailName: 'Chemical Reliance:'
+  emailMessage: "Did you take remember to take them? \n\n1 to 3 a day for the effects
+    to gradually work the doctor said. It must be hard for you to reframe from taking
+    more than prescribed or none at all. You said yourself that this was not going
+    to be easy. Just think, once the routine of taking tablets becomes regular, you\u2019ll
+    start to see a change in your emotions by sustaining some control and become
+    stronger to deal with the mental problems affecting you. \r\n\nThis does not
+    mean to say you have come out of denial. That something only YOU and you alone
+    can decide. Do not think that this medication will hide the truth in what you
+    are feeling. You might tell yourself that you feel better, and you can move forward
+    without further need of support. In order to bring your denial to a close, you
+    should reflect back upon the visions you were having and each photo you have
+    captured to reach this point. \r\n\nWhy don\u2019t you head over to the mirror
+    and take a long hard look at yourself and fine closure\u2026\r"

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e378197e1359f348880112e4a53104d, type: 3}
+  m_Name: Email5
+  m_EditorClassIdentifier: 
+  emailName: 'The Afflictions:'
+  emailMessage: "How's your head that morning? That\u2019s if you can even remember
+    opening the bottle. It seems you\u2019ve found a distraction to block out all
+    the memories you\u2019ve uncovered so far. Everyone likes a drink to relax and
+    enjoy the company but who is around you to share that fun experience? You think
+    that this will be easy to overcome and just forget with the affliction of alcohol?
+    There is no escape from your own problems. \r\n\nYou can only go so far until
+    it will cause yourself a mental collapse and nothing, but the past will cause
+    you further pain. Dulling pain does heal and fade, it only prevents a period
+    where you feel like yourself, only you\u2019ve not given the chance to feel normal
+    because of everything you have gone through, with no way to healthily process
+    from it. \r\n\nAre the visions starting to become clearer? This is what you have
+    been trying to tell yourself from the start. Deep down you are suffering with
+    the events from the past and facing constant denial by discarding it with alcohol,
+    which is only concealing true feelings and dismissing the chance to be open about
+    your emotions. How long can you cope with these defence mechanisms until you
+    become fully condemned?\r\n\nIt\u2019s time to look for some guidance for healthier
+    control. Remember what you stuck on the fridge...\r"

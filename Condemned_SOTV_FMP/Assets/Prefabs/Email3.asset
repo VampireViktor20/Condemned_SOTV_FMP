@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e378197e1359f348880112e4a53104d, type: 3}
   m_Name: Email3
   m_EditorClassIdentifier: 
-  emailName: Family is Forever?
+  emailName: 'Family is Forever?:'
   emailMessage: "Fond memories coming back to you? Your Mum and Dad had been planning
     this special holiday to celebrate your results and getting a place on your dream
     Photography course! It was all so perfect, wasn\u2019t it? Remember the last

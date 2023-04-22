@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e378197e1359f348880112e4a53104d, type: 3}
+  m_Name: Email6
+  m_EditorClassIdentifier: 
+  emailName: 'Self-Wellbeing:'
+  emailMessage: "How did the meeting go? Did it feel better being able to talk to
+    someone instead of keeping it all built up and causing further harm? It must
+    have taken a lot of confidence to do that! Just know that you\u2019ll be better
+    off from, it even though at this point you don\u2019t feel you\u2019ve physically
+    got anywhere with moving forward. \r\n\nJust know that things will get better
+    in time, just following the correct guidance and you\u2019ll look back and think
+    why didn\u2019t I just speak up and ask for help? Of course, you\u2019re not
+    out of the woods yet. The focus is to look after your mental health before rushing
+    into anything else. Don\u2019t feel as if you need to put your life on hold.\n\nEven
+    with the pressure of your studies, you need to take time for yourself and get
+    back on track in being honest and speaking the truth in where you struggle most
+    from unpleasant thoughts and potentially harmful urges. That prescription you
+    picked up the other day should also help you\u2019re your moods and emotions.
+    \r\n\nMight want to check if you have taken your dose today\u2026\r"
