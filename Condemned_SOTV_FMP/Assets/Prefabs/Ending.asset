@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e378197e1359f348880112e4a53104d, type: 3}
+  m_Name: Ending
+  m_EditorClassIdentifier: 
+  emailName: 'Acceptance:'
+  emailMessage: "You did it! \n\nYou overcame the denial within yourself and have
+    accepted you are suffering. It took a lot of strength to face your demons head
+    on! This is the first major step to overcoming your depression. \n\nNow that
+    you have the ability to be honest and speak out, the next step is to leave your
+    apartment before the Veil consumes your thoughts once more! There is a lot to
+    take away from all this, perhaps you can help other souls like yourself from
+    being condemned to this horrible illness\u2026 "

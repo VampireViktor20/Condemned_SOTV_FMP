@@ -22,12 +22,14 @@ public class Polaroid : MonoBehaviour
     [SerializeField] private GameObject PolaroidFlash;
     [SerializeField] private float flashDuration;
 
-    [Header("Polaroid Flash/Fader Effect")]
+    [Header("Animations")]
     [SerializeField] private Animator fadingAnim;
     [SerializeField] private Animator printingAnim;
+    [SerializeField] private Animator newEmailAnim;
 
-    [Header("Polaroid Sound")]
+    [Header("Sounds")]
     [SerializeField] private AudioSource polaroidSound;
+    [SerializeField] private AudioSource newEmailSound;
 
     public bool examineMode = true;
     public bool viewingPolaroid = false;
@@ -36,11 +38,14 @@ public class Polaroid : MonoBehaviour
 
     [Header("Examine Item")]
     [SerializeField] public Text itemNameText;
+    [SerializeField] public List<GameObject> items;
+    [SerializeField] public List<GameObject> emails;
     [SerializeField] public float distance;
     [SerializeField] public Transform playerSocket;
     [SerializeField] public Item item;
     [SerializeField] public GameObject interactIcon;
     [SerializeField] public GameObject polaroidIcon;
+    [SerializeField] public GameObject emailAlert;
     [SerializeField] public PlayerMovement player;
     [SerializeField] public FreeCam freecam;
     [SerializeField] Vector3 originalPos;
@@ -160,7 +165,7 @@ public class Polaroid : MonoBehaviour
             PolaroidUI.SetActive(false);
         }
 
-        if(Input.GetKeyDown(KeyCode.Tab) && onExamine)
+        if(Input.GetKeyDown(KeyCode.E) && onExamine)
         {
             if (examined.tag == "Polaroid")
             {
@@ -218,9 +223,25 @@ public class Polaroid : MonoBehaviour
 
         polaroidInstance = newPolaroid;
 
-        if(currentSpawnPointIndex == 3)
+        if(currentSpawnPointIndex == 1)
         {
             SpawnPointUsedEvent1();
+        }
+        if (currentSpawnPointIndex == 2)
+        {
+            SpawnPointUsedEvent2();
+        }
+        if (currentSpawnPointIndex == 3)
+        {
+            SpawnPointUsedEvent3();
+        }
+        if (currentSpawnPointIndex == 4)
+        {
+            SpawnPointUsedEvent4();
+        }
+        if (currentSpawnPointIndex == 5)
+        {
+            SpawnPointUsedEvent5();
         }
     }
 
@@ -239,24 +260,48 @@ public class Polaroid : MonoBehaviour
         InstantiatePolaroid(item);
         StartCoroutine(DropItem());
         item.gameObject.SetActive(false);
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(2.25f);
         printingAnim.Play("PolaroidPrint");
         yield return new WaitForSeconds(0.5f);
         capturingPolaroid = false;
         RemovePolaroid();
+        emailAlert.SetActive(true);
+        newEmailSound.Play();
+        newEmailAnim.Play("EmailAlert");
+        yield return new WaitForSeconds(1.75f);
+        emailAlert.SetActive(false);
+
 
     }
 
     private void SpawnPointUsedEvent1()
     {
-        //Trigger Point.
+        items[1].SetActive(true);
+        emails[1].SetActive(true);
     }
 
     private void SpawnPointUsedEvent2()
     {
-        //Trigger Point.
+        items[2].SetActive(true);
+        emails[2].SetActive(true);
     }
     private void SpawnPointUsedEvent3()
+    {
+        items[3].SetActive(true);
+        emails[3].SetActive(true);
+    }
+    private void SpawnPointUsedEvent4()
+    {
+        items[4].SetActive(true);
+        emails[4].SetActive(true);
+    }
+    private void SpawnPointUsedEvent5()
+    {
+        items[5].SetActive(true);
+        emails[6].SetActive(true);
+
+    }
+    private void SpawnPointUsedEvent6()
     {
         //Trigger Point.
     }
@@ -269,6 +314,7 @@ public class Polaroid : MonoBehaviour
         fadingAnim.Play("PolaroidFade");
         itemNameText.text = "";
     }
+
 
     IEnumerator PolaroidFlashEffect()
     {
@@ -285,6 +331,8 @@ public class Polaroid : MonoBehaviour
         PolaroidFrame.SetActive(false);
         polaroidInstance = null;
     }
+
+  
 
    
 

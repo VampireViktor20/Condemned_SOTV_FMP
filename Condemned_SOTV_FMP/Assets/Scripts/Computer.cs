@@ -10,9 +10,16 @@ public class Computer : MonoBehaviour
     [SerializeField] public bool usingComputer;
     [SerializeField] public GameObject computerIcon;
     [SerializeField] public GameObject computerUI;
+    [SerializeField] public GameObject loadScreenUI;
     [SerializeField] PlayerMovement player;
     [SerializeField] public PlayerCamera playercam;
     [SerializeField] public FreeCam freecam;
+    [SerializeField] public AudioSource loginSound;
+    [SerializeField] public Animator loadScreenAnim;
+    [SerializeField] public bool loadedComputer;
+
+
+
 
     void Update()
     {
@@ -26,16 +33,18 @@ public class Computer : MonoBehaviour
             {
                 computerIcon.SetActive(true);
 
-                if (Input.GetKeyDown(KeyCode.Mouse0))
+                if (Input.GetKeyDown(KeyCode.Mouse0) && !usingComputer && !loadedComputer) 
                 {
-                    
+                    loadScreenUI.SetActive(true);
+                    StartCoroutine(LoadScreen());
                     Cursor.visible = true;
                     Cursor.lockState = CursorLockMode.Confined;
                     usingComputer = true;
                     computerUI.SetActive(true);
                     player.enabled = false;
                     playercam.enabled = false;
-                    //freecam.enabled = false;
+                    freecam.enabled = false;
+                    loadedComputer = true;
                     
 
 
@@ -46,10 +55,20 @@ public class Computer : MonoBehaviour
             {
                 usingComputer = false;
                 computerIcon.SetActive(false);
+        
             }
             
             
         }
       
+    }
+
+    IEnumerator LoadScreen()
+    {
+        loadScreenAnim.Play("ComputerLoad");
+        loginSound.Play();
+        yield return new WaitForSeconds(0.5f);
+        loadScreenUI.SetActive(false);
+        
     }
 }

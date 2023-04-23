@@ -9,6 +9,7 @@ public class Email : MonoBehaviour
     public GameObject email;
     public PlayerMovement player;
     public PlayerCamera cam;
+    public FreeCam freecam;
     public Computer computer;
 
     void Update()
@@ -41,8 +42,10 @@ public class Email : MonoBehaviour
     public void Logout()
     {
         computer.computerUI.SetActive(false);
+        computer.loadedComputer = false;
         player.enabled = true;
         cam.enabled = true;
+        freecam.enabled = true;
         Cursor.visible = false;
         
     }

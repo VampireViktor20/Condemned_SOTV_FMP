@@ -42,7 +42,7 @@ public class FreeCam : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             freeCamMode = !freeCamMode;
             if(freeCamMode)
@@ -70,7 +70,7 @@ public class FreeCam : MonoBehaviour
         polaroidCapture.ReadPixels(regionToRead, 0, 0, false);
         polaroidCapture.Apply();
         ShowPolaroid();
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(2.25f);
         printingAnim.Play("PolaroidPrint");
         yield return new WaitForSeconds(0.5f);
         RemovePolaroid();
