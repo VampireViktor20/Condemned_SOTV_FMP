@@ -10,6 +10,22 @@ public class ChoiceSystem : MonoBehaviour
     public GameObject dialogueBox;
     public Text wrongChoiceText;
     public GameObject wrongChoiceBox;
+    public GameObject revealScreen;
+    public GameObject transitionScreen;
+    public Animator revealAnim;
+    public Animator transitionAnim;
+
+    [Header("Dialogue Sound")]
+    public AudioSource intro;
+    public AudioSource wrongChoice;
+    public AudioSource dialogue1A;
+    public AudioSource dialogue1B;
+    public AudioSource dialogue2A;
+    public AudioSource dialogue2B;
+    public AudioSource dialogue3A;
+    public AudioSource dialogue3B;
+    public AudioSource dialogue4A;
+    public AudioSource dialogue4B;
 
     [Header("Choice Buttons")]
     public GameObject startChoice1;
@@ -33,12 +49,14 @@ public class ChoiceSystem : MonoBehaviour
 
         void Start()
     {
+        
         StartCoroutine(DialogueIntro());
 
     }
     void Update()
     {
-       
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
 
@@ -151,8 +169,12 @@ public class ChoiceSystem : MonoBehaviour
 
     public IEnumerator DialogueIntro()
     {
+        revealAnim.Play("Reveal");
+        yield return new WaitForSeconds(1f);
+        revealScreen.SetActive(false);
         DialogueText.GetComponent<Text>().text = "SO, YOU FINALLY MADE IT TO THE VEIL? YOU KNEW IT WAS GOING TO HAPPEN SOONER OR LATER...";
-        yield return new WaitForSeconds(5f);
+        intro.Play();
+        yield return new WaitForSeconds(7f);
         DialogueText.GetComponent<Text>().text = "DO YOU UNDERSTAND WHY YOU HAVE BEEN BROUGHT HERE?";
         yield return new WaitForSeconds(3f);
         startChoice1.SetActive(true);
@@ -164,8 +186,9 @@ public class ChoiceSystem : MonoBehaviour
         dialogueBox.SetActive(false);
         yield return new WaitForSeconds(0f);
         wrongChoiceBox.SetActive(true);
-        wrongChoiceText.GetComponent<Text>().text = "YOU DO WISH NOT TO DISCUSS IT? YOU'RE ONLY CONDEMNING YOURSELF FURTHER!";
-        yield return new WaitForSeconds(5f);
+        wrongChoiceText.GetComponent<Text>().text = "DO YOU WISH NOT TO DISCUSS IT? YOU'RE ONLY CONDEMNING YOURSELF FURTHER!";
+        wrongChoice.Play();
+        yield return new WaitForSeconds(4f);
         wrongChoiceBox.SetActive(false);
         dialogueBox.SetActive(true);
 
@@ -174,11 +197,12 @@ public class ChoiceSystem : MonoBehaviour
 
     public IEnumerator Dialogue1A()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0f);
         DialogueText.GetComponent<Text>().text = "YOU ADMIT THAT YOU’RE STRUGGLING THEN? IS THAT ALL?";
-        yield return new WaitForSeconds(4f);
+        dialogue1A.Play();
+        yield return new WaitForSeconds(3f);
         DialogueText.GetComponent<Text>().text = "WHAT IS IT EXACLY YOU ARE STRUGGLING WITH SINCE YOU’VE COME ALL THIS WAY…";
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(3.5f);
         choice1A1.SetActive(true);
         choice1A2.SetActive(true);
        
@@ -186,53 +210,58 @@ public class ChoiceSystem : MonoBehaviour
     }
     public IEnumerator Dialogue1B()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0f);
         DialogueText.GetComponent<Text>().text = "THE POLAROID’S HELPED YOU PIECE TOGETHER AND UNCOVER YOUR PAST";
-        yield return new WaitForSeconds(5f);
+        dialogue1B.Play();
+        yield return new WaitForSeconds(4f);
         DialogueText.GetComponent<Text>().text = "DID YOU LEARN ANYTHING OTHER THAN MAKING A COLLAGE?";
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2.5f);
         choice1B1.SetActive(true);
         choice1B2.SetActive(true);
 
     }
     public IEnumerator Dialogue2A()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0f);
         DialogueText.GetComponent<Text>().text = "IS THAT SO? WOULD YOU SAY IT HAS BECOME TOO MUCH TO HANDLE ALONE?";
-        yield return new WaitForSeconds(5f);
+        dialogue2A.Play();
+        yield return new WaitForSeconds(4.25f);
         DialogueText.GetComponent<Text>().text = "SO MUCH THAT IT'S TIME TO LOOK FOR SUPPORT?";
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2.5f);
         choice2A1.SetActive(true);
         choice2A2.SetActive(true);
     }
     public IEnumerator Dialogue2B()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0f);
         DialogueText.GetComponent<Text>().text = "LIFE? TRUST ME, THIS IS SOMETHING THAT WILL ONLY GET WORSE IF YOU DON’T SEEK HELP!";
+        dialogue2B.Play();
         yield return new WaitForSeconds(5f);
         DialogueText.GetComponent<Text>().text = "DO YOU KNOW WHAT IS CONDEMNING YOU?";
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1.75f);
         choice2B1.SetActive(true);
         choice2B2.SetActive(true);
         
     }
     public IEnumerator Dialogue3A()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0f);
         DialogueText.GetComponent<Text>().text = "THAT’S WHAT I WANTED TO HEAR! REALISING IS THE FIRST PART BUT…";
-        yield return new WaitForSeconds(5f);
+        dialogue3A.Play();
+        yield return new WaitForSeconds(4f);
         DialogueText.GetComponent<Text>().text = "ARE YOU WILLING TO ACCEPT OR DENY THE ONE OF MANY FORMS CONDEMNING YOU?";
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(3.75f);
         choice3A1.SetActive(true);
         choice3A2.SetActive(true);
     }
     public IEnumerator Dialogue3B()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0f);
         DialogueText.GetComponent<Text>().text = "TO YOU I’M NOT, JUST AN UNFORTUNATE SOUL TRYING TO REACH OUT TO OTHERS LIKE YOURSELF WHO ARE SUFFERING.";
-        yield return new WaitForSeconds(5f);
+        dialogue3B.Play();
+        yield return new WaitForSeconds(6f);
         DialogueText.GetComponent<Text>().text = "WHAT DID YOU THINK THE EMAILS WERE FOR? AFTERALL…";
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(2.5f);
         DialogueText.GetComponent<Text>().text = "YOU SENT THEM TO YOURSELF.";
         yield return new WaitForSeconds(1f);
         choice3B1.SetActive(true);
@@ -242,23 +271,28 @@ public class ChoiceSystem : MonoBehaviour
     }
     public IEnumerator Dialogue4A()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0f);
         DialogueText.GetComponent<Text>().text = "YOU’VE COME TO TERMS WITH WHAT’S CONDEMNING YOU.";
-        yield return new WaitForSeconds(5f);
+        dialogue4A.Play();
+        yield return new WaitForSeconds(3f);
         DialogueText.GetComponent<Text>().text = "YOUR SOUL HAS BEEN SPARED FROM THE VEIL AND NOW THE REST IS UP TO YOU…";
         yield return new WaitForSeconds(3f);
+        transitionScreen.SetActive(true);
+        transitionAnim.Play("Transition");
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene("Ending");
 
     }
     public IEnumerator Dialogue4B()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0f);
         DialogueText.GetComponent<Text>().text = "THERE IS ONLY SO MUCH THAT CAN BE DONE TO MAKE YOU REALISE...";
-        yield return new WaitForSeconds(4f);
+        dialogue4B.Play();
+        yield return new WaitForSeconds(3.5f);
         DialogueText.GetComponent<Text>().text = "IT SEEMS YOU ARE NOT READY TO ACCEPT THE TRUTH…";
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(2.5f);
         DialogueText.GetComponent<Text>().text = "YOU SHALL NOW ENTER THE VEIL ONCE MORE TO FACE YOUR DEMONS";
-        yield return new WaitForSeconds(2F);
+        yield return new WaitForSeconds(4f);
         SceneManager.LoadScene("Veil");
     }
 

@@ -243,6 +243,10 @@ public class Polaroid : MonoBehaviour
         {
             SpawnPointUsedEvent5();
         }
+        if(polaroidCount == 6)
+        {
+            SpawnPointUsedEvent6();
+        }
     }
 
     IEnumerator CapturePolaroid()
@@ -298,12 +302,12 @@ public class Polaroid : MonoBehaviour
     private void SpawnPointUsedEvent5()
     {
         items[5].SetActive(true);
-        emails[6].SetActive(true);
+        emails[5].SetActive(true);
 
     }
     private void SpawnPointUsedEvent6()
     {
-        //Trigger Point.
+        emails[6].SetActive(true);
     }
     void ShowPolaroid()
     {

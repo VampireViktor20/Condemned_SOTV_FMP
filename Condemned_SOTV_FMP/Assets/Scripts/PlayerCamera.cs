@@ -15,12 +15,14 @@ public class PlayerCamera : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        
     }
 
 
     void FixedUpdate()
     {
+        Cursor.visible = false;
+
         if (polaroid.GetComponent<Polaroid>().onExamine == false)
         {
             float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime * camSmooth;
