@@ -42,7 +42,7 @@ public class FreeCam : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Tab))
         {
             freeCamMode = !freeCamMode;
             if(freeCamMode)

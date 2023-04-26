@@ -9,10 +9,8 @@ public class PlayerMovement : MonoBehaviour
 
     public float speed = 6f;
 
-    void Start()
-    {
-        
-    }
+   
+    
 
     void FixedUpdate()
     {
@@ -23,4 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
         controller.Move(move * speed * Time.deltaTime);
     }
+
+   
 }
+

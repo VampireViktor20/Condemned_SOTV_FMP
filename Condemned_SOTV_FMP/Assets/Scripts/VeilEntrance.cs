@@ -32,6 +32,6 @@ public class VeilEntrance : MonoBehaviour
         yield return new WaitForSeconds(2.5f);
         veilTransitionAnim.Play("VeilTransition");
         yield return new WaitForSeconds(veilTransitionAnim.GetCurrentAnimatorStateInfo(0).length);
-        SceneManager.LoadScene("Veil");
+        SceneManager.LoadScene("Loading2");
     }
 }

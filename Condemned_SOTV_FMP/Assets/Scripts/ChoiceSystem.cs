@@ -170,7 +170,7 @@ public class ChoiceSystem : MonoBehaviour
     public IEnumerator DialogueIntro()
     {
         revealAnim.Play("Reveal");
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.5f);
         revealScreen.SetActive(false);
         DialogueText.GetComponent<Text>().text = "SO, YOU FINALLY MADE IT TO THE VEIL? YOU KNEW IT WAS GOING TO HAPPEN SOONER OR LATER...";
         intro.Play();
@@ -280,7 +280,7 @@ public class ChoiceSystem : MonoBehaviour
         transitionScreen.SetActive(true);
         transitionAnim.Play("Transition");
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene("Ending");
+        SceneManager.LoadScene("Loading3");
 
     }
     public IEnumerator Dialogue4B()

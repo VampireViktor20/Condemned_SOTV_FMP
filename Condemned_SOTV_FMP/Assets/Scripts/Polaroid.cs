@@ -62,13 +62,17 @@ public class Polaroid : MonoBehaviour
         currentSpawnPointIndex = 0;
         polaroidCapture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
         originalSocketPos = playerSocket.localPosition;
+        StartCoroutine(IntroEmail());
     }
 
     private void Update()
     {
+        
+
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
         RaycastHit hit;
 
+        
 
         if(Physics.Raycast(transform.position, fwd, out hit, distance))
         {
@@ -165,7 +169,7 @@ public class Polaroid : MonoBehaviour
             PolaroidUI.SetActive(false);
         }
 
-        if(Input.GetKeyDown(KeyCode.E) && onExamine)
+        if(Input.GetKeyDown(KeyCode.Tab) && onExamine)
         {
             if (examined.tag == "Polaroid")
             {
@@ -186,6 +190,16 @@ public class Polaroid : MonoBehaviour
 
        
 
+    }
+
+    IEnumerator IntroEmail()
+    {
+        yield return new WaitForSeconds(2f);
+        emailAlert.SetActive(true);
+        newEmailSound.Play();
+        newEmailAnim.Play("EmailAlert");
+        yield return new WaitForSeconds(1.75f);
+        emailAlert.SetActive(false);
     }
 
     IEnumerator PickupItem()
