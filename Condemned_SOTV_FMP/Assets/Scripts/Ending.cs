@@ -26,7 +26,7 @@ public class Ending : MonoBehaviour
         endTransition.Play("Ending");
         yield return new WaitForSeconds(3f);
         SceneManager.LoadScene("Credits");
-
+        
         
     }
 }

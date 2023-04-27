@@ -198,7 +198,7 @@ public class ChoiceSystem : MonoBehaviour
     public IEnumerator Dialogue1A()
     {
         yield return new WaitForSeconds(0f);
-        DialogueText.GetComponent<Text>().text = "YOU ADMIT THAT YOU’RE STRUGGLING THEN? IS THAT ALL?";
+        DialogueText.GetComponent<Text>().text = "YOU ADMIT YOU’RE STRUGGLING THEN? IS THAT ALL?";
         dialogue1A.Play();
         yield return new WaitForSeconds(3f);
         DialogueText.GetComponent<Text>().text = "WHAT IS IT EXACLY YOU ARE STRUGGLING WITH SINCE YOU’VE COME ALL THIS WAY…";
@@ -211,7 +211,7 @@ public class ChoiceSystem : MonoBehaviour
     public IEnumerator Dialogue1B()
     {
         yield return new WaitForSeconds(0f);
-        DialogueText.GetComponent<Text>().text = "THE POLAROID’S HELPED YOU PIECE TOGETHER AND UNCOVER YOUR PAST";
+        DialogueText.GetComponent<Text>().text = "THE POLAROIDS HELPED YOU PIECE TOGETHER AND UNCOVER YOUR PAST";
         dialogue1B.Play();
         yield return new WaitForSeconds(4f);
         DialogueText.GetComponent<Text>().text = "DID YOU LEARN ANYTHING OTHER THAN MAKING A COLLAGE?";

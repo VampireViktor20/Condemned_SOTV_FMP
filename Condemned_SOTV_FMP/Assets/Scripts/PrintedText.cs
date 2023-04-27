@@ -9,9 +9,12 @@ public class PrintedText : MonoBehaviour
     public float typingSpeed = 0.0f;
     public Text textBox;
     private StringBuilder stringBuilder = new StringBuilder();
+    public AudioSource typing;
+    public bool isTypingFished = false;
 
     void Start()
     {
+        typing.Play();
         StartCoroutine(TypeText(textBox.text));
     }
     public IEnumerator TypeText(string text)
@@ -23,7 +26,10 @@ public class PrintedText : MonoBehaviour
             stringBuilder.Append(text[i]);
             textBox.text = stringBuilder.ToString();
             yield return new WaitForSeconds(typingSpeed);
+         
         }
+        isTypingFished = true;
+        typing.Stop();
 
     }
 }

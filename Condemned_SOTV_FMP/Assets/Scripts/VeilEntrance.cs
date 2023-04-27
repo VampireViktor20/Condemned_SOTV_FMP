@@ -9,6 +9,7 @@ public class VeilEntrance : MonoBehaviour
     public GameObject shatterEffect;
     public Animator veilTransitionAnim;
     public GameObject veilTransitionScreen;
+    public PlayerMovement player;
     public AudioSource mirrorBreak;
    
 
@@ -24,7 +25,7 @@ public class VeilEntrance : MonoBehaviour
 
     IEnumerator VeilTransition()
     {
-
+        player.enabled = false;
         mirrorBreak.Play();
         shatterEffect.SetActive(true);
         mirror.SetActive(false);

@@ -30,6 +30,7 @@ public class Polaroid : MonoBehaviour
     [Header("Sounds")]
     [SerializeField] private AudioSource polaroidSound;
     [SerializeField] private AudioSource newEmailSound;
+    [SerializeField] private AudioSource FlashSound;
 
     public bool examineMode = true;
     public bool viewingPolaroid = false;
@@ -192,6 +193,18 @@ public class Polaroid : MonoBehaviour
 
     }
 
+    IEnumerator Heartbeat()
+    {
+        yield return new WaitForSeconds(2f);
+        FlashSound.Play();
+        yield return new WaitForSeconds(0.5f);
+        FlashSound.Play();
+        yield return new WaitForSeconds(1f);
+        FlashSound.Play();
+        yield return new WaitForSeconds(0.5f);
+        FlashSound.Play();
+
+    }
     IEnumerator IntroEmail()
     {
         yield return new WaitForSeconds(2f);
@@ -252,6 +265,7 @@ public class Polaroid : MonoBehaviour
         if (currentSpawnPointIndex == 4)
         {
             SpawnPointUsedEvent4();
+            StartCoroutine(Heartbeat());
         }
         if (currentSpawnPointIndex == 5)
         {

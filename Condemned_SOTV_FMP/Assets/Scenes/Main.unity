@@ -2184,7 +2184,6 @@ RectTransform:
   - {fileID: 542774089}
   - {fileID: 1350001314}
   - {fileID: 2129111959}
-  - {fileID: 807922846}
   m_Father: {fileID: 1426750477}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4505,7 +4504,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 251711399}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -1.859, y: 0.3, z: 2.913}
   m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children:
@@ -4515,7 +4514,7 @@ Transform:
   - {fileID: 2037113807}
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &251711402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6308,15 +6307,15 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "You found it! Remember when Debbie made it for you? That bond you shared
-    was so strong. You could feel like you like you could to her about anything,
-    day or night never mattered as she was there! \r\n\nThat all changed when the
-    exam period took over your socialising as studying became your main priority.
-    Debbie was still around at school but all the focus on revision started to bend
-    your friendship, becoming isolated without having time to relax and have the
-    closest person to you for support. Would things have been different if you made
-    time back then and spoke to her more? \r\n\nOf course, that didn\u2019t mean
-    to say your parents weren\u2019t there for you right? There was always that photo
-    you kept reminding you of family memories\u2026\r"
+    was so strong. You feel like you could talk to her about anything, day or night
+    never mattered as she was there! \r\n\nThat all changed when the exam period
+    took over your socialising as studying became your main priority. Debbie was
+    still around at school but all the focus on revision started to bend your friendship,
+    becoming isolated without having time to relax and have the closest person to
+    you for support. Would things have been different if you made time back then
+    and spoke to her more? \r\n\nOf course, that didn\u2019t mean to say your parents
+    weren\u2019t there for you right? There was always that photo you kept reminding
+    you of family memories\u2026\r"
 --- !u!222 &371263457
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6324,90 +6323,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 371263454}
-  m_CullTransparentMesh: 0
---- !u!1 &377723998
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 377723999}
-  - component: {fileID: 377724001}
-  - component: {fileID: 377724000}
-  m_Layer: 5
-  m_Name: EndingMessage
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &377723999
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 377723998}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 807922846}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -47, y: -21.439}
-  m_SizeDelta: {x: 200.3952, y: 42.884277}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &377724000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 377723998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 3910ad9530fe85e46971f384dc7702fb, type: 3}
-    m_FontSize: 18
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "You did it! \n\nYou overcame the denial within yourself and have accepted
-    you are suffering. It took a lot of strength to face your demons head on! This
-    is the first major step to overcoming your depression. \n\nNow that you have
-    the ability to be honest and speak out, the next step is to leave your apartment
-    before the Veil consumes your thoughts once more! There is a lot to take away
-    from all this, perhaps you can help other souls like yourself from being condemned
-    to this horrible illness\u2026 "
---- !u!222 &377724001
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 377723998}
   m_CullTransparentMesh: 0
 --- !u!1 &378899519
 GameObject:
@@ -7523,7 +7438,7 @@ RectTransform:
   m_GameObject: {fileID: 409007385}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0.5}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 1180378468}
   m_RootOrder: 1
@@ -10802,6 +10717,133 @@ Transform:
   m_Father: {fileID: 2025893093}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &562474301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 562474303}
+  - component: {fileID: 562474302}
+  m_Layer: 0
+  m_Name: MainBGMusic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &562474302
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562474301}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e1a58a7fe436d614cb1f6fb0ebe766f7, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &562474303
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562474301}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -545.9066, y: -382.3853, z: -154.42258}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1759485246}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &565267742
 GameObject:
   m_ObjectHideFlags: 0
@@ -10878,16 +10920,16 @@ MonoBehaviour:
     be easy to overcome and just forget with the affliction of alcohol? There is
     no escape from your own problems. \r\n\nYou can only go so far until it will
     cause yourself a mental collapse and nothing, but the past will cause you further
-    pain. Dulling pain does heal and fade, it only prevents a period where you feel
-    like yourself, only you\u2019ve not given the chance to feel normal because of
-    everything you have gone through, with no way to healthily process from it. \r\n\nAre
-    the visions starting to become clearer? This is what you have been trying to
-    tell yourself from the start. Deep down you are suffering with the events from
-    the past and facing constant denial by discarding it with alcohol, which is only
-    concealing true feelings and dismissing the chance to be open about your emotions.
-    How long can you cope with these defence mechanisms until you become fully condemned?\r\n\nIt\u2019s
-    time to look for some guidance for healthier control. Remember what you stuck
-    on the fridge...\r"
+    pain. Dulling pain doesn't  heal and fade, it only prevents a period where you
+    feel like yourself, only you\u2019ve not given the chance to feel normal because
+    of everything you have gone through, with no way to healthily process from it.
+    \r\n\nAre the visions starting to become clearer? This is what you have been
+    trying to tell yourself from the start. Deep down you are suffering with the
+    events from the past and facing constant denial by discarding it with alcohol,
+    which is only concealing true feelings and dismissing the chance to be open about
+    your emotions. How long can you cope with these defence mechanisms until you
+    become fully condemned?\r\n\nIt\u2019s time to look for some guidance for healthier
+    control. Remember what you stuck on the fridge...\r"
 --- !u!222 &565267745
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13204,6 +13246,7 @@ MonoBehaviour:
   shatterEffect: {fileID: 1237614898}
   veilTransitionAnim: {fileID: 401746437}
   veilTransitionScreen: {fileID: 401746433}
+  player: {fileID: 251711402}
   mirrorBreak: {fileID: 659591755}
 --- !u!65 &659591757
 BoxCollider:
@@ -15529,177 +15572,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 803791877}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &807922845
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 807922846}
-  - component: {fileID: 807922850}
-  - component: {fileID: 807922849}
-  - component: {fileID: 807922848}
-  - component: {fileID: 807922847}
-  m_Layer: 5
-  m_Name: EndingEmail
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &807922846
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 807922845}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1761708917}
-  - {fileID: 377723999}
-  m_Father: {fileID: 95615831}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 153.23209, y: -672.46204}
-  m_SizeDelta: {x: 306.46417, y: 85.761475}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &807922847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 807922845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f96fcd1ba71ca24e98f2e0d4467050a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  email: {fileID: 11400000, guid: 077a0314f55b8d243a498da8302ef561, type: 2}
-  emailName: {fileID: 1761708918}
-  emailMessage: {fileID: 377724000}
-  emailNameView: {fileID: 1390077587}
-  emailMessageView: {fileID: 2053957057}
---- !u!114 &807922848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 807922845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.4392157}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 807922849}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1501210238}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 807922847}
-        m_MethodName: AddContent
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2087120074}
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &807922849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 807922845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 10
---- !u!222 &807922850
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 807922845}
-  m_CullTransparentMesh: 0
 --- !u!1 &814458345
 GameObject:
   m_ObjectHideFlags: 0
@@ -15836,6 +15708,7 @@ GameObject:
   - component: {fileID: 832923243}
   - component: {fileID: 832923245}
   - component: {fileID: 832923244}
+  - component: {fileID: 832923246}
   m_Layer: 5
   m_Name: Email5Message
   m_TagString: Untagged
@@ -15901,16 +15774,16 @@ MonoBehaviour:
     be easy to overcome and just forget with the affliction of alcohol? There is
     no escape from your own problems. \r\n\nYou can only go so far until it will
     cause yourself a mental collapse and nothing, but the past will cause you further
-    pain. Dulling pain does heal and fade, it only prevents a period where you feel
-    like yourself, only you\u2019ve not given the chance to feel normal because of
-    everything you have gone through, with no way to healthily process from it. \r\n\nAre
-    the visions starting to become clearer? This is what you have been trying to
-    tell yourself from the start. Deep down you are suffering with the events from
-    the past and facing constant denial by discarding it with alcohol, which is only
-    concealing true feelings and dismissing the chance to be open about your emotions.
-    How long can you cope with these defence mechanisms until you become fully condemned?\r\n\nIt\u2019s
-    time to look for some guidance for healthier control. Remember what you stuck
-    on the fridge...\r"
+    pain. Dulling pain doesn't  heal and fade, it only prevents a period where you
+    feel like yourself, only you\u2019ve not given the chance to feel normal because
+    of everything you have gone through, with no way to healthily process from it.
+    \r\n\nAre the visions starting to become clearer? This is what you have been
+    trying to tell yourself from the start. Deep down you are suffering with the
+    events from the past and facing constant denial by discarding it with alcohol,
+    which is only concealing true feelings and dismissing the chance to be open about
+    your emotions. How long can you cope with these defence mechanisms until you
+    become fully condemned?\r\n\nIt\u2019s time to look for some guidance for healthier
+    control. Remember what you stuck on the fridge...\r"
 --- !u!222 &832923245
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15919,6 +15792,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 832923242}
   m_CullTransparentMesh: 0
+--- !u!114 &832923246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832923242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2fd27386ad927f45b0d36fbeea6b43a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typingSpeed: 0.025
+  textBox: {fileID: 832923244}
+  typing: {fileID: 1752718913}
+  isTypingFished: 0
 --- !u!1 &835730242
 GameObject:
   m_ObjectHideFlags: 0
@@ -16572,8 +16461,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.7581877, y: 1, z: 1.4159523}
-  m_Center: {x: -0.03426368, y: 0, z: 0.20797661}
+  m_Size: {x: 1, y: 1, z: 1.6554098}
+  m_Center: {x: -0.23172094, y: 0, z: -0.27936614}
 --- !u!4 &865314551
 Transform:
   m_ObjectHideFlags: 0
@@ -16582,7 +16471,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 865314549}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.315, y: 0.5448, z: -1.27}
+  m_LocalPosition: {x: -0.315, y: 0.5448, z: -0.43}
   m_LocalScale: {x: 1.75, y: 3.5000002, z: 1.5000008}
   m_Children:
   - {fileID: 1571132619}
@@ -16605,6 +16494,7 @@ MonoBehaviour:
   shatterEffect: {fileID: 1571132616}
   veilTransitionAnim: {fileID: 401746437}
   veilTransitionScreen: {fileID: 401746433}
+  player: {fileID: 251711402}
   mirrorBreak: {fileID: 865314553}
 --- !u!82 &865314553
 AudioSource:
@@ -17955,6 +17845,7 @@ MonoBehaviour:
   newEmailAnim: {fileID: 82745627}
   polaroidSound: {fileID: 963194231}
   newEmailSound: {fileID: 82745630}
+  FlashSound: {fileID: 1149399018}
   examineMode: 1
   viewingPolaroid: 0
   capturingPolaroid: 0
@@ -19917,19 +19808,19 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Did you take remember to take them? \n\n1 to 3 a day for the effects to
-    gradually work the doctor said. It must be hard for you to reframe from taking
-    more than prescribed or none at all. You said yourself that this was not going
-    to be easy. Just think, once the routine of taking tablets becomes regular, you\u2019ll
-    start to see a change in your emotions by sustaining some control and become
-    stronger to deal with the mental problems affecting you. \r\n\nThis does not
-    mean to say you have come out of denial. That something only YOU and you alone
-    can decide. Do not think that this medication will hide the truth in what you
-    are feeling. You might tell yourself that you feel better, and you can move forward
-    without further need of support. In order to bring your denial to a close, you
-    should reflect back upon the visions you were having and each photo you have
-    captured to reach this point. \r\n\nWhy don\u2019t you head over to the mirror
-    and take a long hard look at yourself and find closure\u2026\r"
+  m_Text: "Did you remember to take them? \n\n1 to 3 a day for the effects to gradually
+    work the doctor said. It must be hard for you to reframe from taking more than
+    prescribed or none at all. You said yourself that this was not going to be easy.
+    Just think, once the routine of taking tablets becomes regular, you\u2019ll start
+    to see a change in your emotions by sustaining some control and become stronger
+    to deal with the mental problems affecting you. \r\n\nThis does not mean to say
+    you have come out of denial. That something only YOU and you alone can decide.
+    Do not think that this medication will hide the truth in what you are feeling.
+    You might tell yourself that you feel better, and you can move forward without
+    further need of support. In order to bring your denial to a close, you should
+    reflect back upon the visions you were having and each photo you have captured
+    to reach this point. \r\n\nWhy don\u2019t you head over to the mirror and take
+    a long hard look at yourself and find closure\u2026\r"
 --- !u!222 &1092319644
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20027,6 +19918,7 @@ GameObject:
   - component: {fileID: 1107166605}
   - component: {fileID: 1107166607}
   - component: {fileID: 1107166606}
+  - component: {fileID: 1107166608}
   m_Layer: 5
   m_Name: Email4Message
   m_TagString: Untagged
@@ -20107,6 +19999,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1107166604}
   m_CullTransparentMesh: 0
+--- !u!114 &1107166608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107166604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2fd27386ad927f45b0d36fbeea6b43a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typingSpeed: 0.025
+  textBox: {fileID: 1107166606}
+  typing: {fileID: 1752718913}
+  isTypingFished: 0
 --- !u!1 &1113065579
 GameObject:
   m_ObjectHideFlags: 0
@@ -20850,6 +20758,133 @@ MonoBehaviour:
   polaroid: {fileID: 0}
   player: {fileID: 251711402}
   ItemName: 
+--- !u!1 &1149399016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1149399017}
+  - component: {fileID: 1149399018}
+  m_Layer: 0
+  m_Name: Heartbeat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1149399017
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149399016}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1759485246}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1149399018
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149399016}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 17298db61b55e114c90fa2a03ea57b17, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1152777920
 GameObject:
   m_ObjectHideFlags: 0
@@ -21687,6 +21722,7 @@ GameObject:
   - component: {fileID: 1193444925}
   - component: {fileID: 1193444927}
   - component: {fileID: 1193444926}
+  - component: {fileID: 1193444928}
   m_Layer: 5
   m_Name: Email1Message
   m_TagString: Untagged
@@ -21760,6 +21796,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1193444924}
   m_CullTransparentMesh: 0
+--- !u!114 &1193444928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193444924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2fd27386ad927f45b0d36fbeea6b43a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typingSpeed: 0.025
+  textBox: {fileID: 1193444926}
+  typing: {fileID: 1752718913}
+  isTypingFished: 0
 --- !u!1 &1201011440
 GameObject:
   m_ObjectHideFlags: 0
@@ -28292,6 +28344,7 @@ GameObject:
   - component: {fileID: 1256929162}
   - component: {fileID: 1256929164}
   - component: {fileID: 1256929163}
+  - component: {fileID: 1256929165}
   m_Layer: 5
   m_Name: Email6Message
   m_TagString: Untagged
@@ -28372,6 +28425,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1256929161}
   m_CullTransparentMesh: 0
+--- !u!114 &1256929165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256929161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2fd27386ad927f45b0d36fbeea6b43a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typingSpeed: 0.025
+  textBox: {fileID: 1256929163}
+  typing: {fileID: 1752718913}
+  isTypingFished: 0
 --- !u!1 &1259717799
 GameObject:
   m_ObjectHideFlags: 0
@@ -32528,6 +32597,7 @@ GameObject:
   - component: {fileID: 1484736848}
   - component: {fileID: 1484736850}
   - component: {fileID: 1484736849}
+  - component: {fileID: 1484736851}
   m_Layer: 5
   m_Name: Email7Message
   m_TagString: Untagged
@@ -32586,19 +32656,19 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Did you take remember to take them? \n\n1 to 3 a day for the effects to
-    gradually work the doctor said. It must be hard for you to reframe from taking
-    more than prescribed or none at all. You said yourself that this was not going
-    to be easy. Just think, once the routine of taking tablets becomes regular, you\u2019ll
-    start to see a change in your emotions by sustaining some control and become
-    stronger to deal with the mental problems affecting you. \r\n\nThis does not
-    mean to say you have come out of denial. That something only YOU and you alone
-    can decide. Do not think that this medication will hide the truth in what you
-    are feeling. You might tell yourself that you feel better, and you can move forward
-    without further need of support. In order to bring your denial to a close, you
-    should reflect back upon the visions you were having and each photo you have
-    captured to reach this point. \r\n\nWhy don\u2019t you head over to the mirror
-    and take a long hard look at yourself and find closure\u2026\r"
+  m_Text: "Did you remember to take them? \n\n1 to 3 a day for the effects to gradually
+    work the doctor said. It must be hard for you to reframe from taking more than
+    prescribed or none at all. You said yourself that this was not going to be easy.
+    Just think, once the routine of taking tablets becomes regular, you\u2019ll start
+    to see a change in your emotions by sustaining some control and become stronger
+    to deal with the mental problems affecting you. \r\n\nThis does not mean to say
+    you have come out of denial. That something only YOU and you alone can decide.
+    Do not think that this medication will hide the truth in what you are feeling.
+    You might tell yourself that you feel better, and you can move forward without
+    further need of support. In order to bring your denial to a close, you should
+    reflect back upon the visions you were having and each photo you have captured
+    to reach this point. \r\n\nWhy don\u2019t you head over to the mirror and take
+    a long hard look at yourself and find closure\u2026\r"
 --- !u!222 &1484736850
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -32607,6 +32677,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1484736847}
   m_CullTransparentMesh: 0
+--- !u!114 &1484736851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484736847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2fd27386ad927f45b0d36fbeea6b43a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typingSpeed: 0.025
+  textBox: {fileID: 1484736849}
+  typing: {fileID: 1752718913}
+  isTypingFished: 0
 --- !u!1 &1487655801
 GameObject:
   m_ObjectHideFlags: 0
@@ -34451,11 +34537,11 @@ ParticleSystem:
   serializedVersion: 6
   lengthInSec: 5
   simulationSpeed: 1
-  stopAction: 2
+  stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 0
+  looping: 1
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -42420,6 +42506,133 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1747082526}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1752718912
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1752718914}
+  - component: {fileID: 1752718913}
+  m_Layer: 0
+  m_Name: TextPrint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1752718913
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752718912}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5682ea2134297d5438fa84fc82ad8b10, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1752718914
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752718912}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -545.9066, y: -382.3853, z: -154.42258}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1759485246}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1759485245
 GameObject:
   m_ObjectHideFlags: 0
@@ -42450,87 +42663,12 @@ Transform:
   - {fileID: 1207642092}
   - {fileID: 505606138}
   - {fileID: 2087120075}
+  - {fileID: 562474303}
+  - {fileID: 1752718914}
+  - {fileID: 1149399017}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1761708916
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1761708917}
-  - component: {fileID: 1761708919}
-  - component: {fileID: 1761708918}
-  m_Layer: 5
-  m_Name: EndingTitle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1761708917
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1761708916}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 807922846}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.6, y: 21.439}
-  m_SizeDelta: {x: 283.11493, y: 42.884277}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1761708918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1761708916}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 3910ad9530fe85e46971f384dc7702fb, type: 3}
-    m_FontSize: 22
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 40
-    m_Alignment: 3
-    m_AlignByGeometry: 1
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Acceptance
---- !u!222 &1761708919
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1761708916}
-  m_CullTransparentMesh: 0
 --- !u!1 &1766882482
 GameObject:
   m_ObjectHideFlags: 0
@@ -48350,6 +48488,7 @@ GameObject:
   - component: {fileID: 2035274710}
   - component: {fileID: 2035274712}
   - component: {fileID: 2035274711}
+  - component: {fileID: 2035274713}
   m_Layer: 5
   m_Name: Email2Message
   m_TagString: Untagged
@@ -48409,15 +48548,15 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "You found it! Remember when Debbie made it for you? That bond you shared
-    was so strong. You could feel like you like you could to her about anything,
-    day or night never mattered as she was there! \r\n\nThat all changed when the
-    exam period took over your socialising as studying became your main priority.
-    Debbie was still around at school but all the focus on revision started to bend
-    your friendship, becoming isolated without having time to relax and have the
-    closest person to you for support. Would things have been different if you made
-    time back then and spoke to her more? \r\n\nOf course, that didn\u2019t mean
-    to say your parents weren\u2019t there for you right? There was always that photo
-    you kept reminding you of family memories\u2026\r"
+    was so strong. You feel like you could talk to her about anything, day or night
+    never mattered as she was there! \r\n\nThat all changed when the exam period
+    took over your socialising as studying became your main priority. Debbie was
+    still around at school but all the focus on revision started to bend your friendship,
+    becoming isolated without having time to relax and have the closest person to
+    you for support. Would things have been different if you made time back then
+    and spoke to her more? \r\n\nOf course, that didn\u2019t mean to say your parents
+    weren\u2019t there for you right? There was always that photo you kept reminding
+    you of family memories\u2026\r"
 --- !u!222 &2035274712
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -48426,6 +48565,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2035274709}
   m_CullTransparentMesh: 0
+--- !u!114 &2035274713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035274709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2fd27386ad927f45b0d36fbeea6b43a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typingSpeed: 0.025
+  textBox: {fileID: 2035274711}
+  typing: {fileID: 1752718913}
+  isTypingFished: 0
 --- !u!1 &2037113806
 GameObject:
   m_ObjectHideFlags: 0
@@ -51155,6 +51310,7 @@ GameObject:
   - component: {fileID: 2130364277}
   - component: {fileID: 2130364279}
   - component: {fileID: 2130364278}
+  - component: {fileID: 2130364280}
   m_Layer: 5
   m_Name: Email3Message
   m_TagString: Untagged
@@ -51239,6 +51395,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2130364276}
   m_CullTransparentMesh: 0
+--- !u!114 &2130364280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130364276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2fd27386ad927f45b0d36fbeea6b43a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typingSpeed: 0.025
+  textBox: {fileID: 2130364278}
+  typing: {fileID: 1752718913}
+  isTypingFished: 0
 --- !u!1 &2130365441
 GameObject:
   m_ObjectHideFlags: 0

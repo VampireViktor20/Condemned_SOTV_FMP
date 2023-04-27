@@ -13,7 +13,6 @@ public class Credits : MonoBehaviour
         StartCoroutine(EndCredits());
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -22,14 +21,19 @@ public class Credits : MonoBehaviour
     public IEnumerator EndCredits()
     {
         titleAnim.Play("Credits1");
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         creditsAnim.Play("Credits2");
+        yield return new WaitForSeconds(3f);
         skipButton.SetActive(true);
+        Cursor.visible = true;
+        yield return new WaitForSeconds(17f);
+        SceneManager.LoadScene("Menu");
+        
 
     }
 
     public void SkipCredits()
     {
-        Application.Quit();
+        SceneManager.LoadScene("Menu");
     }
 }
